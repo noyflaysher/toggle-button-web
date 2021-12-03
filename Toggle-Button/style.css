@@ -1,0 +1,266 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@400;700&family=Sacramento&display=swap');
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    text-align: center; 
+    align-items: center;
+}
+
+body{
+    background-image:url(images/bg-top.svg), url(images/bg-bottom.svg);
+    background-position: right top, left bottom;
+    background-color: hsl(240, 78%, 98%);
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    align-items: center;
+    text-align: center; 
+    font-weight: 700;
+}
+
+h1{
+    color: hsl(233, 13%, 49%);
+    size:32px;
+    padding-top:40px;
+    margin-bottom: 30px;
+}
+
+
+
+/* the toogle botton*/
+
+.toggle-bottom{
+  display: inline-block;
+  position: relative;
+  width: 65px;
+  height: 30px;
+  appearance: none;
+  background: linear-gradient(hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  outline: none;
+  border-radius: 20px;
+  transition: 0.5s;
+  cursor: pointer;
+  
+}
+
+.toggle-bottom::before{
+  content: "";
+  position: absolute;
+  left: 5px;
+  right: 0;
+  top: 3px;
+  bottom: 0px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50px;
+  background-color: white;
+  transition: 0.5s;
+}
+
+.toggle-bottom:checked::before{
+
+  transform: translateX(28px);
+  
+}
+
+.p1::after
+{
+  content: '199.99';
+}
+
+.toggle-bottom:checked ~ .pricing-main .basic .p1::after 
+{
+  content: '19.99';
+}
+
+.p2::after
+{
+  content: '249.99';
+}
+
+.toggle-bottom:checked ~ .pricing-main .proffesional .p2::after 
+{
+  content: '24.99';
+}
+
+.p3::after
+{
+  content: '399.99';
+}
+
+.toggle-bottom:checked ~ .pricing-main .master .p3::after 
+{
+  content: '39.99';
+}
+
+ 
+  .button-section{
+    color:hsl(234, 14%, 74%);
+    display: flex;
+    padding:45px; 
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+  }
+
+  /*/////////////////////////////////////////////////////////*/
+
+  .time-pay{
+    color:hsl(234, 14%, 74%);
+    display: inline-block;
+    margin-bottom: 30px;
+  
+  }
+
+  .Annually{
+    margin-right: 17px;
+  }
+
+  .Monthly{
+    margin-left: 17px;
+  }
+  
+/*pricing main*/
+
+  .pricing-main{
+    box-sizing: border-box;
+    display:flex;
+    position: relative;
+   justify-content:center;
+    width: 1150px;
+    height: 500px;
+    left:200px;
+    top:-30px;
+    align-items: center;
+  }
+
+  .prices{
+    height: 420px;
+    width: 400px;
+    border-radius:10px;
+    position:relative;
+    top:25px;
+    left:3px;
+    align-items: center;
+    color:hsl(233, 13%, 49%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .price::before {
+    content: "$";
+    font-size: 30px;
+    color:hsl(232, 13%, 33%);
+  }
+
+  .price.p2::before {
+    content: "$";
+    font-size: 30px;
+    color:white;
+  }
+ 
+  .basic, .master{
+    background-color:white;
+  }
+
+  .proffesional{
+    background: linear-gradient(hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+    height: 470px;
+    bottom: 2px;
+    transform: scaleX(1.05);
+    z-index: 15;
+    color:white;
+    padding-top: 25px;
+    
+  }
+
+ 
+  .proffesional li{
+    color:white;
+  }
+
+  .proffesional a.learn-more{
+      background: white;
+      color:hsl(237, 63%, 64%);  
+  }
+
+
+
+  .box-title{
+      color:hsl(233, 13%, 49%);
+      font-size: 20px;
+      margin-bottom: 15px;
+      margin-top: 40px;
+      
+  }
+ .proffesional .box-title, .proffesional .p2{
+   color:white;
+ }
+
+ 
+
+  .price{
+      font-size: 65px;
+      padding-left: 7px;
+  }
+  
+
+  .p1,.p2,.p3{
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:hsl(232, 13%, 33%);
+    margin-bottom: 30px;
+  }
+
+  
+
+  ul{
+      list-style-type: none;
+  }
+
+  ul li{
+    color:hsl(233, 13%, 49%);
+    border-bottom: 1px solid hsl(234, 14%, 74%);
+    padding:15px;
+  }
+  
+  ul li:first-child{
+    border-top: 1px solid hsl(234, 14%, 74%);
+  }
+
+  a.learn-more{
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding:10px 0;
+      background: linear-gradient(hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+      display: block;
+      width:250px;
+      border-radius: 7px;
+      color:white;
+      margin-top: 20px;
+      position: absolute;
+      left:66.5px;
+      border:1px solid transparent;
+    
+  }
+  
+  a.learn-more:hover{
+      color:hsl(237, 63%, 64%);
+      background: transparent;
+      border:1px solid hsl(233, 13%, 49%);
+  }
+
+  .proffesional a.learn-more:hover{
+    color:white;
+    background:transparent;
+    border-color: white;
+  }
+  
